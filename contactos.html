@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/soda.png">
+    <title>Contactos</title>
+    <link rel="stylesheet" type="text/css" href="contactos.css">
+</head>
+<body>
+    <header class="coca-cola-header">
+        <div class="header-container">
+            <div class="logo">
+               <img src="img/cocacola.jpg" alt=""></a>
+            </div>
+            <nav class="navigation">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="marcas.html">Marcas</a></li>
+                    <li><a href="noticias.html">Noticias</a></li>
+                    <li><a href="contactos.html">Contactos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+        <div id="contenedor">
+            <h1>Contacto Coca-Cola</h1>
+            <form id="contact-form" onsubmit="return validateForm()">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" placeholder="Nombre" required pattern="[A-Za-z\s]+">
+                </div>
+    
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="favorite-drink">¿Cuál es tu bebida favorita?</label>
+                    <select id="favorite-drink" name="favorite-drink" required>
+                        <option value="" disabled selected>Selecciona una bebida</option>
+                        <option value="coca-cola">Coca-Cola</option>
+                        <option value="fanta">Fanta</option>
+                        <option value="sprite">Sprite</option>
+                    </select>
+                </div>
+    
+                <div class="form-group">
+                    <label for="comments">Quejas, Reclamos o Comentarios:</label>
+                    <textarea id="comments" name="comments" rows="4" placeholder="Escribe tus comentarios aquí..." required></textarea>
+                </div>
+    
+                <button type="submit" class="submit-button">Enviar</button>
+            </form>
+    
+            <div class="contact-info">
+                <h2>Información de Contacto</h2>
+                <p>Teléfono Móvil: +51 978 664 741</p>
+                <p>Teléfono Fijo: +51 123 456 789</p>
+                <button class="whatsapp-button" onclick="window.open('https://wa.me/51978664741')">Enviar Mensaje por WhatsApp</button>
+            </div>
+        </div>
+    
+        <script>
+            function validateForm() {
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+    
+               
+                const namePattern = /^[A-Za-z\s]+$/;
+                if (!namePattern.test(name)) {
+                    alert('Por favor, introduce un nombre válido (solo letras).');
+                    return false;
+                }
+    
+                
+    
+                return true; 
+            }
+        </script>
+    </body>
+    
+
+
+<footer class="coca-cola-footer">
+    <hr class="footer-divider">
+    <hr class="footer-divider">
+    <div class="footer-content">
+        <div class="footer-section">
+            <img src="img/logofooter.jpg" alt="Coca-Cola Logo">
+            <p>Destapa la felicidad</p>
+        </div>
+        <div class="footer-section">
+            <h3>Direcciones</h3>
+            <p>Perú - Arequipa, Cayma 311</p>
+        </div>
+        <div class="footer-section">
+            <h3>Redes Sociales</h3>
+            <div class="social-icons">
+                <nav>
+                    <ul>
+                        <li><a href="https://www.facebook.com/1393245584230208"><img src="img/logofacebook.png" alt="" width="30px" height="20px"></a></li>
+                        <li><a href="http://instagram.com/cocacola_esp"><img src="img/fondoinstagram+.png" alt="" width="30px" height="20px"></a></li>
+                        <li><a href="http://www.youtube.com/user/conocecocacola"><img src="img/logoyyoutube.webp" alt="" width="30px" height="20px"></a></li>
+                        <li><a href="https://twitter.com/cocacola_es"><img src="img/logotwitter.jpg" alt="" width="30px" height="20px"></a></li>
+                    </ul>
+                </nav>  
+            </div>
+        </div>
+    </div>
+    <hr class="footer-bottom-divider">
+    <p class="copyright">&copy; 2024 The Coca-Cola Company. Todos los derechos reservados.</p>
+    <a href="#" class="scroll-to-top">↑ Regresar</a>
+</footer>
+</html>
